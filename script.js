@@ -10,8 +10,13 @@ function setValue(element, value) {
     const totalExpensesElement = document.getElementById(element);
     const expenses = totalExpensesElement.innerText = value;
     return parseFloat(expenses);
-}
+};
 
+function setValueElement(saveId) {
+    const saveElement = document.getElementById(saveId);
+    const save = saveElement.innerText = value;
+    return parseFloat(save);
+}
 
 //step-1:...........
 let total;
@@ -55,9 +60,9 @@ document.getElementById('btn-save').addEventListener('click', function () {
         if (inputFieldString > 0) {
             const save = fieldIntNumber('saveId');
             const totalSave = (incomeNumber * (save / 100));
-            setValue('total-save', totalSave);
+            setValueElement('total-save', totalSave);
             const totalRemaining = total - totalSave;
-            setValue('total-remaining', totalRemaining);
+            setValueElement('total-remaining', totalRemaining);
         }
         else {
             alert('Make sure your Input is greater than 0 ');
