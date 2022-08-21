@@ -45,4 +45,27 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     }
 });
 
+//step-1:..............
+document.getElementById('btn-save').addEventListener('click', function () {
+    const incomeNumber = fieldIntNumber('income-field');
+    const inputField = document.getElementById('saveId');
+    const inputFieldString = inputField.value;
+
+    if (inputField.value != '' && isNaN(inputFieldString) != true) {
+        if (inputFieldString > 0) {
+            const save = fieldIntNumber('saveId');
+            const totalSave = (incomeNumber * (save / 100));
+            setValue('total-save', totalSave);
+            const totalRemaining = total - totalSave;
+            setValue('total-remaining', totalRemaining);
+        }
+        else {
+            alert('Make sure your Input is greater than 0 ');
+        }
+    }
+    else {
+        alert("Input Box can't be Empty.....");
+    }
+});
+
 
