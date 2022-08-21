@@ -1,4 +1,7 @@
+
+
 /* ................ common function .............  */
+/*
 function fieldIntNumber(elementId) {
     const incomeText = document.getElementById(elementId);
     const incomeString = incomeText.value;
@@ -74,3 +77,4 @@ document.getElementById('btn-save').addEventListener('click', function () {
 });
 
 
+*/
